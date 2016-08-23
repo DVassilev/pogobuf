@@ -73,14 +73,7 @@ function Client() {
         */
         self.endpoint = INITIAL_ENDPOINT;
 
-        return self.batchStart()
-            .getPlayer()
-            .getHatchedEggs()
-            .getInventory()
-            .checkAwardedBadges()
-            .downloadSettings()
-            .batchCall()
-            .then(self.processInitialData);
+        return Promise.resolve(true);
     };
 
     /**
